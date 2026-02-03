@@ -7,16 +7,17 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
 
-        List<String> valid_cmds = new ArrayList<>();
-
         while (true) {
             System.out.print("$ ");
             String cmd = sc.nextLine();
-            if (!valid_cmds.contains(cmd)) {
-                System.out.println(cmd + ": " + "command not found");
+            System.out.println(cmd + ": " + "command not found");
+
+            switch (cmd){
+                case "exit": System.exit(0);
+            }
             }
         }
 
 
     }
-}
+
