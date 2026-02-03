@@ -5,16 +5,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        System.out.print("$ ");
         Scanner sc = new Scanner(System.in);
 
-        List<String> valid_cmds = new ArrayList<String>();
+        List<String> valid_cmds = new ArrayList<>();
 
-        String cmd = sc.nextLine();
+        do {
+            System.out.println("$ ");
+            String cmd = sc.nextLine();
+            if (!valid_cmds.contains(cmd)) {
+                System.out.println(cmd + ": " + "command not found");
+            }
+        } while (true);
 
-        if(!valid_cmds.contains(cmd)){
-            System.out.println(cmd + ": " + "command not found");
-        }
 
     }
 }
