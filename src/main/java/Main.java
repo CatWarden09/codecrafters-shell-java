@@ -15,7 +15,7 @@ public class Main {
             if(cmd.contains("exit")){
                 System.exit(0);
             } else if (cmd.startsWith("echo ")) {
-                String echo_cmd = cmd.substring(4);
+                String echo_cmd = cmd.substring(5);
                 System.out.println(echo_cmd);
             } else{System.out.println(cmd + ": " + "command not found");
             }
