@@ -22,7 +22,7 @@ public class Main {
                 String type_cmd = cmd.substring(5);
                 if(Arrays.asList(builtins).contains(type_cmd)){
                     System.out.println(type_cmd + " is a shell builtin");
-                }
+                } else{System.out.println(cmd + ": command not found");
             } else{System.out.println(cmd + ": command not found");
             }
 
