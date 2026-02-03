@@ -9,13 +9,13 @@ public class Main {
 
         List<String> valid_cmds = new ArrayList<>();
 
-        do {
-            System.out.println("$ ");
+        while (true) {
+            System.out.print("$ ");
             String cmd = sc.nextLine();
             if (!valid_cmds.contains(cmd)) {
                 System.out.println(cmd + ": " + "command not found");
             }
-        } while (true);
+        }
 
 
     }
