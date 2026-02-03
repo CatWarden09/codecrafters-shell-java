@@ -10,10 +10,11 @@ public class Main {
         while (true) {
             System.out.print("$ ");
             String cmd = sc.nextLine();
-            System.out.println(cmd + ": " + "command not found");
+
 
             switch (cmd){
                 case "exit": System.exit(0);
+                default: System.out.println(cmd + ": " + "command not found");
             }
             }
         }
