@@ -13,23 +13,22 @@ public class Main {
 
             String[] builtins = {"exit", "echo", "type"};
 
-            if(cmd.startsWith("exit") && cmd.length() == 4){
+            if (cmd.startsWith("exit") && cmd.length() == 4) {
                 System.exit(0);
             } else if (cmd.startsWith("echo ")) {
                 String echo_cmd = cmd.substring(5);
                 System.out.println(echo_cmd);
             } else if (cmd.startsWith("type ")) {
                 String type_cmd = cmd.substring(5);
-                if(Arrays.asList(builtins).contains(type_cmd)){
+                if (Arrays.asList(builtins).contains(type_cmd)) {
                     System.out.println(type_cmd + " is a shell builtin");
-                } else{System.out.println(cmd + ": command not found");
-            } else{System.out.println(cmd + ": command not found");
-            }
+                } else {
+                    System.out.println(cmd + ": command not found");
+                }
 
+            } else {
+                System.out.println(cmd + ": command not found");
+            }
         }
     }
 }
-
-
-
-
