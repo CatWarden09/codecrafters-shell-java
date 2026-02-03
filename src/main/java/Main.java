@@ -12,13 +12,18 @@ public class Main {
             String cmd = sc.nextLine();
 
 
-            switch (cmd){
-                case "exit": System.exit(0);
-                default: System.out.println(cmd + ": " + "command not found");
+            if(cmd.contains("exit")){
+                System.exit(0);
+            } else if (cmd.startsWith("echo ")) {
+                String echo_cmd = cmd.substring(4);
+                System.out.println(echo_cmd);
+            } else{System.out.println(cmd + ": " + "command not found");
             }
-            }
+
         }
-
-
     }
+}
+
+
+
 
