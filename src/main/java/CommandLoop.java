@@ -1,10 +1,11 @@
 import commands.ParsedCommand;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class CommandLoop {
-    public void run(){
+    public void run() throws IOException {
         CommandExecutor cmdExecutor = new CommandExecutor();
         CommandParser cmdParser = new CommandParser();
 

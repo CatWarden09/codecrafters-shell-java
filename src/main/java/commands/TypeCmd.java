@@ -4,7 +4,6 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
-import java.util.List;
 
 public class TypeCmd {
     private static final String[] builtins = {"exit", "echo", "type"};
@@ -28,7 +27,7 @@ public class TypeCmd {
                         Path f_path = Path.of(dir, file);
                         if(Files.isExecutable(f_path) && file.equals(cmd.args().getFirst())){
                             executableFound = true;
-                            System.out.println(cmd.args().getFirst() + " is " + f_path.toString());
+                            System.out.println(cmd.args().getFirst() + " is " + f_path);
                         }
                     }
 
