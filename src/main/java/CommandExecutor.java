@@ -1,13 +1,13 @@
 import commands.*;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
 
 
 public class CommandExecutor {
     private final ExitCmd exitCmd = new ExitCmd();
     private final EchoCmd echoCmd = new EchoCmd();
     private final TypeCmd typeCmd = new TypeCmd();
+    private final PwdCmd pwdCmd = new PwdCmd();
     private final ExternalCmd externalCmd = new ExternalCmd();
 
     public void execute(ParsedCommand cmd) throws IOException {
@@ -20,6 +20,9 @@ public class CommandExecutor {
                 break;
             case "type":
                 typeCmd.run(cmd);
+                break;
+            case "pwd":
+                pwdCmd.run();
                 break;
             default:
                 externalCmd.run(cmd);
