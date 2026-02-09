@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.util.Arrays;
 
 public class TypeCmd {
-    private static final String[] builtins = {"exit", "echo", "type", "pwd"};
+    private static final String[] builtins = {"exit", "echo", "type", "pwd", "cd"};
     private static final String pathEnv = System.getenv("PATH");
 
     public void run(ParsedCommand cmd) {
