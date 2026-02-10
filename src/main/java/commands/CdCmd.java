@@ -39,6 +39,8 @@ public class CdCmd {
                 return;
             }
 
+        } else if (cmd.args().getFirst().contains("~") && cmd.args().size() == 1) {
+            path = config.getHomeDir();
         } else {
             path = Path.of(cmd.args().getFirst());
         }
